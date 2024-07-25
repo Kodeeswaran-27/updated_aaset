@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.SidebarList {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: #2D60FF;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+.link:hover, .link.active {
+  background-color: white;
+  color: #2D60FF;
+}
+
+.link #icon {
+  color: #2D60FF;
+  display: grid;
+  place-items: center;
+}
+
+.link #title {
+  color: #2D60FF;
+  display: grid;
+  place-items: center;
+  flex:70%;
+}
+

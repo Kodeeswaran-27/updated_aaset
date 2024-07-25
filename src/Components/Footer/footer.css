@@ -1,0 +1,12 @@
+footer {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    /* width: 43%; */
+    width: 100%;
+
+}
+
+footer p {
+    color: whitesmoke;
+}
