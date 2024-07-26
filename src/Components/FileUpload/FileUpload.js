@@ -22,30 +22,34 @@ const FileUpload = () => {
   const navigate = useNavigate();
 
   const handleDrop = (acceptedFiles) => {
+    console.log("Inside handledrop")
     setLoading(true);
-    setTimeout(async () => {
-      try {
-        const formData = new FormData();
-        formData.append('file', acceptedFiles[0]);
-        const response = await axios.post('http://localhost:5000/train', formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        });
-        sessionStorage.setItem('responseData', JSON.stringify(response.data));
-        console.log('Data uploaded successfully:', response.data);
-        navigate('/main/predictedData');
-      } catch (error) {
-        console.error('Error uploading data:', error);
-      }
-    }, 5000);
+    setTimeout(() => { apiCall(acceptedFiles) },5000);
   };
 
+  async function apiCall(acceptedFiles) {
+    try {
+      const formData = new FormData();
+      formData.append('file', acceptedFiles[0]);
+      const response = await axios.post('http://localhost:5000/train', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      sessionStorage.setItem('responseData', JSON.stringify(response.data));
+      console.log('Response received successfully', response.data);
+      // navigate('/main/predictedData');
+    } catch (error) {
+      console.error('Error uploading data:', error);
+    }
+  }
   const handleBrowse = (event) => {
     setLoading(true);
-    setTimeout(() => {
-      processFiles(event.target.files);
-    }, 5000);
+    setTimeout(() => { apiCall(event.target.files) },5000);
+    console.log("inside handlebrowse")
+    // setTimeout(() => {
+    //   // processFiles(event.target.files);
+    // }, 5000);
   };
 
   const processFiles = (files) => {
@@ -80,30 +84,16 @@ const FileUpload = () => {
     setUploadedFiles(prevFiles => prevFiles.filter(file => file.id !== id));
   };
 
-  // const goBack = async (jsonData) => {
   function predict() {
     console.log("Button clicked");
-    navigate('/main/predictedData');
-    //test api start
-    // try{
-    //   const response=await axios.get('https://66a1d926967c89168f1dc513.mockapi.io/todo')
-    //   console.log("Datas",response.data);
-    // }
-    // catch(error){
-    //   console.error(error);
-    // }
-    //test api ends
-    // try {
-    //   const response = await axios.post('http://localhost:5000/train', jsonData, {
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   });
-    //   console.log('Data uploaded successfully:', response.data);
-    //   navigate('/main/predictedData');
-    // } catch (error){
-    //   console.error('Error uploading data:', error);
-    // }
+    const responseData = JSON.parse(sessionStorage.getItem('responseData')) || [];
+    if (!responseData.length) {
+      alert('No data found');
+      navigate('/main/fileupload');
+    }
+    else {
+      navigate('/main/predictedData');
+    }
   }
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -121,7 +111,7 @@ const FileUpload = () => {
           <div className={`div1 ${uploadedFiles.length > 0 ? 'small' : 'large'}`}>
             <div className='div2'>
               <center><p className='p1'>Please upload the file for analysis</p></center>
-              <bold><label className='note'>Note:&nbsp;Kindly use the below Sample Excel format</label></bold>
+              <label className='note'>Note:&nbsp;Kindly use the below Sample Excel format</label>
             </div>
             <div className='drop'
               {...getRootProps()}

@@ -13,10 +13,9 @@ function LocationAssetDetails() {
 
   if (!responseData.length) {
     alert('No data found');
-    navigate('/main/about');
+    navigate('/main/fileupload');
   }
   // const responseData = JSON.parse(sessionStorage.getItem('responseData'));
-  console.log("LocationDetailsCalled____", responseData)
   // const [countryName, setCountryName] = useState({ value: 'India', label: 'India' });
   const [year, setYear] = useState({ value: '2024', label: '2024' });
   const [currentPage, setCurrentPage] = useState(0);
