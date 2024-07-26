@@ -1,0 +1,186 @@
+.sub{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-image: url('../../Assets/Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.main  {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #123361;
+}
+.header{
+font-size:46px ;
+font-family: sans-serif;
+width: 100%;
+height: 25vh;
+}
+.header img{
+    padding-left: 30px;
+    width: 450px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    /* background-color: white; */
+    width: inherit;
+    justify-content: center;
+    margin-top: 3%;
+    align-items: center;
+}
+h3{
+    color: whitesmoke !important;
+    font-size:30px;
+    margin-bottom: 1px;
+}
+h4{
+color: whitesmoke !important;
+
+}
+.card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: fit-content;
+  background-color: #5b96d14f;
+  box-shadow: 0 4px 8px 0 rgba(27, 27, 27, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2%;
+  border-radius: 20px;
+  margin-top: -20px;
+}
+.card form{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10px; */
+    width: 66%;
+}
+.card p{
+  width: 100%;
+  /* height: 2vh; */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  /* background-color: white; */
+  color: #ffffff;
+  /* margin-bottom: 35px; */
+  margin: 0px 0px 25px 0px;
+
+}
+#label{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.input-box{
+  width: 100%;
+  height: 60px;
+  margin: 0px 0px 10px 0px;
+  /* padding: 0px 10px 0px 10px; */
+}
+.input-box input{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border: 1px solid #b4b4b4;
+    /* outline: none; */
+
+    border-radius: 5px;
+    color: black ;
+    margin:5px 0 0 0;
+    font-size:15px;
+    font-family: sans-serif;
+    padding-left: 10px;
+    /* padding-left:20px;
+    padding-right: 0; */
+}
+.login-link{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+}
+.login-link a{
+    margin: 0px 15px 0 15px;
+    color: whitesmoke;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding-right: 15px;
+}
+.login-link a:hover{
+    text-decoration: underline;
+}
+.button {
+    color: whitesmoke;
+    background-color: #03040669;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    width: 95%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid transparent; /* Initial border */
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Initial text shadow */
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.button:hover {
+    background-color: #101e3a69;
+    border-color: #ffffff; /* Border color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+    transform: scale(1.02); /* Slightly increase the size */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow on hover */
+}
+
+.button:active {
+    background-color: #123361;
+    border-color: #ffffff; /* Border color on active */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow on active */
+    transform: scale(0.98); /* Slightly decrease the size */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow on active */
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+.bv2{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }

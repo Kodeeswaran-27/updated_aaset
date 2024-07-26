@@ -1,0 +1,82 @@
+.about-page {
+  font-family: Arial, sans-serif;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.AnalyticsImage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -10%;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-benefits {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-benefits div {
+  width: 48%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+li strong {
+  color: white;
+}
+
+.goto-dashboard-btn {
+  position: absolute;
+  top: 3%;
+  right: -5%;
+  padding: 1% 2%;
+  background-color: white;
+  color: #003161;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: auto;
+}
+
+.goto-dashboard-btn:hover {
+  background-color: #f6f5f5;
+}
