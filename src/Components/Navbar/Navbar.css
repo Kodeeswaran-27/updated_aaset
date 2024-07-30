@@ -1,0 +1,152 @@
+.Navbar{
+  height: 80px;
+  width: 100%;
+  /* background-color: #66abff; */
+  background-color: #003161;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content:center ;
+  align-items: center;
+  /* position: relative; */
+}
+
+.Navbar .logo{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3%;
+}
+
+.Navbar .logo img{
+  height: 100px;
+}
+
+.Navbar .logout{
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 6%;
+}
+
+.Navbar .logout p{
+  color: white;
+  font-family: sans-serif;
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.logout_image{
+  height: 25px;
+  padding-left: 2%;
+}
+
+.Navbar .leftSide {
+  display: flex;
+  flex: 15%;
+  margin-right: -4%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar .divider {
+  width: 1px;
+  background-color: white;
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.Navbar .middle {
+  display: flex;
+  flex: 25%;
+  align-items: center;
+  justify-content: left;
+}
+
+.Navbar .middle .liveWorkSpace {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  max-height: 60px;
+}
+
+.Navbar .middle .liveWorkSpace sup {
+  font-size: 50%;
+  vertical-align: super;
+}
+
+.Navbar .rightSide {
+  display: flex;
+  flex: 45%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.Navbar .leftSide .WiproLogo {
+  max-height: 60px;
+}
+
+.Navbar .rightSide .accountIcon {
+  font-size: 35px;
+  margin-right: 8px;
+  color: white;
+}
+
+.assetTitle{
+  width: 33%;
+  color: whitesmoke;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.Navbar .rightSide .username {
+  font-size: 20px;
+  color: white;
+}
+
+.accountContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.profilePopup {
+  position: absolute;
+  right: 15%;
+  top: 75%;
+  width: 200px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1050;
+  border-radius: 8px;
+}
+
+.popupContent {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.LogOut {
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: #66abff;
+  font-weight: bold;
+}
+
+.Role {
+  margin-top: 5px;
+}

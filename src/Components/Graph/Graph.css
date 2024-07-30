@@ -1,0 +1,77 @@
+container {
+  margin-bottom: 20px !important;
+}
+
+.back {
+  width: 8%;
+  background: whitesmoke;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  height: max-content;
+  padding: 1%;
+  
+  
+}
+.selectors {
+  display: flex;
+  /* justify-content: space-between; */
+  /* width: 300px; */
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-top: 10px;
+  align-items: center;
+  /* margin-left: -11pc; */
+}
+
+.selectors .css-yk16xz-control,
+.selectors .css-1pahdxg-control {
+  width: 100%;
+}
+
+#chartdiv,
+#chartdiv2 {
+  width: 1000px !important;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: 10px solid white;
+  margin-top: 10px;
+}
+.filter-item{
+  min-width: 40vw;
+    margin: 0% 2%;
+    max-width: 40vw;
+}
+.footer {
+  color: white;
+}
+
+.donutChartDiv {
+  color: black;
+}
+
+#donutChartDiv {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  margin-top: 10px;
+  padding-left: 6px;
+  padding-top: 5px;
+}
+
+.bv {
+  margin-top: 1%;
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+}
+.css-b62m3t-container{
+  background-color: transparent;
+  /* padding: 10%; */
+}
