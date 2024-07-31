@@ -10,6 +10,7 @@ import LocationAssetDetails from '../LocationAssetDetails/LocationAssetDetails';
 import Graph from '../Graph/Graph';
 import "./Main.css";
 import AboutPage from '../About/AboutPage';
+import Footer from '../Footer/footer'
 
 function App() {
     return (
@@ -31,7 +32,10 @@ function App() {
                             <Route path="graph" element={<Graph />} />
                         </Routes>
                     </div>
+                    <div>
+                    </div>
                 </div>
+                <Footer/>
             </nav>
         </div>
     )
