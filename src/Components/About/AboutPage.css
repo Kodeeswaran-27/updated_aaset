@@ -1,10 +1,12 @@
 .about-page {
   font-family: Arial, sans-serif;
   color: white;
-  max-width: 1200px;
+  max-width: 80%;
+  /* height: 10vh; */
   margin: auto;
   padding: 20px;
   position: relative;
+  border: 1px solid black;
 }
 
 .AnalyticsImage {
@@ -28,14 +30,42 @@
   left: 50%;
 }
 
+.section1,.section2,.section3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.division1,.division2,.division3{
+  flex: 1;
+  width: 100%;
+  border: 1px 
+  solid black;
+}
+
+.div-img{
+  flex: 1;
+  width: 5%;
+  border: 1px solid white;
+}
+
 .content h2 {
   font-size: 20px;
   color: white;
   display: flex;
   align-items: center;
-
   font-weight: bold;
   margin-bottom: 1%;
+}
+
+.content .para{
+  font-size: 20px;
+}
+
+.about-images{
+width: 30%;
+height: 75%;
 }
 
 .sb-image {
@@ -44,7 +74,6 @@
   transition: transform 0.5s ease-in-out;
   transform: scale(1);
 }
-
 
 .sb-image:hover {
   transform: scale(1.2);
@@ -55,8 +84,8 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px 0px;
-  height: 63vh;
-  max-height: 63vh;
+  height:100vh;
+  /* max-height: 63vh; */
   overflow-y: hidden;
 
 }

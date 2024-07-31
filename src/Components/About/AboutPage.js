@@ -4,6 +4,7 @@ import storyboard from '../../Assets/storyboard.png';
 import AboutPageImage from '../../Assets/AboutPageImage.png';
 import Footer from '../Footer/footer';
 import './AboutPage.css';
+import logo from '../../Assets/logo.png'
 
 function AboutPage() {
 
@@ -16,44 +17,36 @@ function AboutPage() {
         </div>
       </div>
       <div className="content-container">
-        <div className="imgss">
-          <img src={storyboard} alt="Predictive Analytics" className="sb-image" />
-        </div>
         <div className="content">
-          <section>
-            <h2>Our Mission & Solution</h2>
+          <div className='section1'>
+            <div className='division1'>
+            <h2>Upload Your Data</h2>
             <p className="para">
-              We empower enterprises with AI-driven tools that transform complex data into strategic decisions, ensuring clients stay ahead. Our platform offers predictive analytics and precise recommendations, enabling optimal asset management and cost reduction.
+              Start by uploadig your Excel sheet containing asset information. Our intuitive interface makes it easy to drag and drop your file or select it from your device. Ensure your data is accurate and up-to-date for the best predictions.
             </p>
-          </section>
-          <section>
-            <h2>Key Features & Benefits</h2>
-            <div className="features-benefits">
-              <ul>
-                <li><strong>AI-Powered Insights:</strong> </li>
-                <li>Utilize machine learning to accurately predict asset needs and optimize management.</li>
-                <li><strong>Customizable Dashboards:</strong> </li>
-                <li>Access real-time analytics and tailor views to essential metrics for efficient decision-making.</li>
-                <li><strong>Seamless Integration & Cost Efficiency:</strong> </li>
-                <li>Integrate smoothly with existing systems, minimize excess inventory, and reduce expenses for long-term growth.</li>
-              </ul>
             </div>
-          </section>
-
-
+          </div>
+          <div className='section2'>
+            <div className='division2'>
+            <h2>Predict Future Assets</h2>
+            <p className="para">
+              Once your data is uploaded, our advanced prediction model gets to work. Using state-of-the-art algorithms, we analyze your data to forecast future asset performance. Sit back and let our technology provide you with valuable insights.
+            </p>
+            </div>
+            <div className='div-img'>
+            <img className='about-images' src={logo} alt="Logo"/>
+            </div>
+          </div>
+          <div className='section3'>
+            <div className='division3'>
+            <h2>Visualize Your Results</h2>
+            <p className="para">
+              After the prediction process is complete, view your results in a clear, graphical format. Our interactive graphs and charts allow you to easily interpret the predictions and make informed decisions about your assets.
+            </p>
+            </div>
+          </div>
         </div>
-        <Link to="/main/fileupload" className="goto-dashboard-btn">
-          Predict Assets
-        </Link>
-
       </div>
-      <section>
-        <h2 className='h2team'> Meet Our Team</h2>
-        <p className="para">
-          Our team consists of industry experts, data scientists, and technology enthusiasts dedicated to delivering the best asset management solutions.
-          We believe in fostering a culture of innovation and excellence to drive results for our clients.
-        </p>
-      </section>
       <Footer></Footer>
     </div>
   );
