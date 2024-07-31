@@ -10,6 +10,9 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: 20px;
+  position: relative;
+  left: -5pc;
 }
 
 .countryDetails {
@@ -18,8 +21,8 @@
   align-items: center;
   font-weight: bold;
   margin-left: -6%;
-
 }
+
 .back-button {
   width: 10%;
   background: whitesmoke;
@@ -45,26 +48,16 @@
   color: white;
   font-size: 150%;
   margin-top: 10%;
+  display: flex;
   margin-bottom: 10%;
   width: 100%;
-}
-
-.graph-button {
-  width: 10%;
-  background: whitesmoke;
-  border-radius: 3px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  right: -5pc;
-  height: 40px;
 }
 
 .maindiv {
   display: flex;
   justify-content: center;
-  margin-left: -7%;
+  align-items: center;
+  margin-left:5%;
   width: 100%;
 }
 
@@ -74,6 +67,12 @@
   justify-content: space-between;
   padding: 10px 20px 20px 20px;
   max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .month-box {
@@ -86,8 +85,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   position: relative;
-  /* Added to position the button */
+  transition: border-color 0.5s;
 }
+
+.month-box:hover {
+  border-color: #013161;
+  border-width: 2px;
+}
+
 
 .month-box h2 {
   text-align: center;
@@ -122,65 +127,52 @@
 
 .table-body {
   flex: 1;
-  /* overflow-y: auto; */
+
   height: calc(6 * 40px);
-  /* Adjust 40px based on row height */
+
   max-height: 300px;
-  /* or any value that suits your design */
+
   overflow-y: scroll;
-  /* This will add vertical scrollbar */
+
   overflow-x: hidden;
-  /* Use this to hide horizontal scrollbar if not needed */
+
   -ms-overflow-style: none;
-  /* IE and Edge */
+
   scrollbar-width: none;
-  /* Firefox */
+
 }
 
 .table-body::-webkit-scrollbar {
   display: none;
 }
 
+
+.data-table {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.table-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
 .table-row:last-child {
   border-bottom: none;
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.pagination button {
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 10% !important;
-}
-
-.pagination button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer p {
-  color: white;
-  font-family: sans-serif;
-}
-
 @media (max-width: 1300px) {
-  .month-box {
-    width: calc(50% - 20px);
+  .row {
+    flex-direction: column;
   }
 }
 
