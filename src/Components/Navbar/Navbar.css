@@ -23,23 +23,30 @@
 }
 
 .Navbar .logout{
-  width: 50%;
+  width: 45%;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 6%;
+  padding-right: 5%;
 }
 
 .Navbar .logout p{
   color: white;
   font-family: sans-serif;
   font-size: 110%;
-  font-weight: bold;
+  font-weight: 600;
+  height: 100%;
 }
 
 .logout_image{
-  height: 25px;
-  padding-left: 2%;
+  height: 22px;
+  /* padding-left: 9%; */
+  margin-left: 9%;
+  transition: transform 0.2s;
+}
+
+.logout_image:hover{
+  transform: scale(1.2);
 }
 
 .Navbar .leftSide {
@@ -149,4 +156,98 @@
 
 .Role {
   margin-top: 5px;
+}
+
+.home
+{
+  height: 20px;
+  padding-left: 2%;
+  margin-right: 2%;
+  transition: transform 0.2s;
+}
+
+.home:hover{
+  transform: scale(1.2);
+}
+
+.file{
+  height: 24px;
+  padding-left: 2%;
+  margin-right: 2%;
+  transition: transform 0.2s;
+}
+
+.file:hover{
+  transform: scale(1.2);
+}
+
+.nav-icons{
+  height: 100%;
+  width: 24px;
+  color: whitesmoke;
+}
+
+.icons-btn{
+  width: 100%;
+  background:transparent;
+  border: none;
+}
+
+.icons-btn:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.icons-btn1{
+  width: 100%;
+  background:transparent;
+  border: none;
+}
+
+.icons-btn1:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.icons-btn:disabled{
+  background-color: grey;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.predict{
+  height: 23px;
+  padding-left: 2%;
+  margin-right: 2%;
+  /* transition: transform 0.2s; */
+}
+
+.profile{
+  margin-left: 20px;
+  width: 25%;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.profile:hover{
+  border: 2px solid white;
+  transform: scale(1.05);
+}
+
+.profile p{
+  /* font-weight:200; */
+  /* text-transform: none; */
+  margin: 0px;
+}
+.tooltip{
+  margin-right: 4%;
+}
+
+.mar-left{
+  margin-left: 5% !important;
 }

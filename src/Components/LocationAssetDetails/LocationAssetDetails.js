@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import { useNavigate } from 'react-router-dom';
 import './LocationAssetDetails.css';
-import out from './out.json'
 
 function LocationAssetDetails() {
-  // const navigate = useNavigate();
-  // const responseData = JSON.parse(sessionStorage.getItem('responseData')) || [];
-  // if (!responseData.length) {
-  //   alert('No data found');
-  //   navigate('/main/fileupload');
-  // }
+  const navigate = useNavigate();
+  const responseData = JSON.parse(sessionStorage.getItem('responseData')) || [];
+  console.log("Response length",responseData.length)
   const [year, setYear] = useState({ value: '2024', label: '2024' });
-  const filteredData = out.filter(data => data.Year === Number(year.value));
+  const filteredData = responseData.filter(data => data.Year === Number(year.value));
   const monthData = new Array(12).fill(null).map((_, idx) => {
     return filteredData.filter(data => data.Month_Num === idx + 1);
   });

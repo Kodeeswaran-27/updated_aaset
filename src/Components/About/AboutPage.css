@@ -121,15 +121,6 @@
   align-items: center;
 }
 
-/* .content p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgb(223, 229, 235);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .features-benefits {
   display: flex;
   justify-content: space-between;

@@ -1,16 +1,13 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
-// import Sidebar from '../Sidebar/Sidebar';
+import PrivateRoute from '../../Security/Privateroute'; // Ensure the correct path
 import FileUpload from '../FileUpload/FileUpload';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from 'react-router-dom';
 import LocationAssetDetails from '../LocationAssetDetails/LocationAssetDetails';
-// import LaptopDetails from '../LaptopDetails/LaptopDetails';
-// import Accounts from '../Accounts/Accounts';
-// import Home from '../Home/Home';
 import Graph from '../Graph/Graph';
-import "./Main.css";
+import './Main.css';
 import AboutPage from '../About/AboutPage';
-import Footer from '../Footer/footer'
+import Footer from '../Footer/footer';
 
 function App() {
     return (
@@ -23,21 +20,21 @@ function App() {
                     </div> */}
                     <div className="Sidebar1">
                         <Routes>
-                            {/* <Route path="home" element={<FileUpload />} /> */}
-                            <Route path="fileupload" element={<FileUpload />} />
-                            {/* <Route path="predictedData/laptopdetails" element={<LaptopDetails />} /> */}
-                            <Route path="predictedData" element={<LocationAssetDetails />} />
-                            {/* <Route path="accounts" element={<Accounts />} /> */}
-                            <Route path="about" element={<AboutPage />} />
-                            <Route path="graph" element={<Graph />} />
+                            <Route path="/" element={<Navigate to="/fileupload" />} />
+                            <Route element={<PrivateRoute />}>
+                                <Route path="fileupload" element={<FileUpload />} />
+                                <Route path="predictedData" element={<LocationAssetDetails />} />
+                                <Route path="about" element={<AboutPage />} />
+                                <Route path="graph" element={<Graph />} />
+                            </Route>
+                            {/* Add any other public routes here if needed */}
                         </Routes>
                     </div>
-                    <div>
-                    </div>
                 </div>
-                <Footer/>
             </nav>
+            <Footer/>
         </div>
-    )
+    );
 }
+
 export default App;

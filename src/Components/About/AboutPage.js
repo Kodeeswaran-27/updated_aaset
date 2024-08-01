@@ -1,7 +1,6 @@
-import Footer from '../Footer/footer';
 import './AboutPage.css';
 import visual from '../../Assets/statistical.png'
-import predict from '../../Assets/predict.png'
+import predict from '../../Assets/predict_about.png'
 import upload from '../../Assets/worksheet.png'
 
 function AboutPage() {
@@ -49,7 +48,6 @@ function AboutPage() {
           </div>
         </div>
       </div>
-      {/* <Footer></Footer> */}
     </div>
   );
 }

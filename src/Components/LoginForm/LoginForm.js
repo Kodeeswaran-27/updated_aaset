@@ -43,8 +43,8 @@ function LoginForm() {
                             <Fileupload />
                         </AuthenticatedTemplate>
                         <UnauthenticatedTemplate>
-                        <h3 className="labels">Asset Management</h3>
-                        <h4 className="labels">Login to unclock insights into AI Asset requirement forecastig</h4>
+                        <h3 className="labels">Asset Prediction</h3>
+                        <h4 className="labels">Login to unlock insights into AI Asset requirement forecastig</h4>
                         <img src={icon} alt="Asset Management icon" />
                         <SignInButton />
                         </UnauthenticatedTemplate>
